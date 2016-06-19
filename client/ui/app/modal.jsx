@@ -16,6 +16,7 @@ import {customStyles} from '/client/ui/app/app.jsx'
 export default class SettingModal extends React.Component {
     constructor(props) {
         super(props);
+        console.log(this.props);
         this.state = {
             modalIsOpen: false,
             toggleValue: this.props.settings[1].value,
