@@ -74,6 +74,8 @@ class App extends React.Component {
                 == password.toString()) {
                 Session.set('authorized', true);
                 this.setState({password: ''});
+            }else{
+                alert('incorrect password');
             }
         };
         this.handelPasswordChange = password => {
