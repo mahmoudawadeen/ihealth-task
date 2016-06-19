@@ -27,7 +27,7 @@ export default class SettingModal extends React.Component {
         };
         this.closeModal = ()=> {
             this.setState({modalIsOpen: false});
-            const pass = CryptoJS.AES.encrypt(this.state.password, this.props.settings[0].value);
+            const pass = CryptoJS.AES.encrypt(this.state.password, this.props.settings[1][1].value);
             Settings.update({_id: 'password'}, {
                 $set: {
                     "value": pass.toString()
