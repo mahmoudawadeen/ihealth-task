@@ -5,6 +5,11 @@ const Settings = new Meteor.Collection('settings');
 
 Meteor.startup(() => {
     // code to run on server at startup
+    if (Settings.find().count() === 0) {
+        JSON.parse(Assets.getText("settings.json")).settings.forEach(function (doc) {
+            Settings.insert(doc);
+        });
+    }
     Meteor.publish("userData", function () {
         if (this.userId) {
             return [Meteor.users.find({_id: this.userId},

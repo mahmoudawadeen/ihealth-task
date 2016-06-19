@@ -1,0 +1,8 @@
+{
+  "settings":
+  [
+    { "_id": "isPrivate", "value": false },
+    { "_id": "key", "value": "iHealthLabs" },
+    { "_id": "password", "value": "" }
+  ]
+}
