@@ -70,7 +70,7 @@ class App extends React.Component {
         };
         this.handleSubmit = (event) => {
             var password = this.state.password;
-            if (CryptoJS.AES.decrypt(this.props.data[1][2].value, this.props.data[1][0].value).toString(CryptoJS.enc.Utf8)
+            if (CryptoJS.AES.decrypt(this.props.data[1][2].value, this.props.data[1][1].value).toString(CryptoJS.enc.Utf8)
                 == password.toString()) {
                 Session.set('authorized', true);
                 this.setState({password: ''});
@@ -90,7 +90,7 @@ class App extends React.Component {
         this.setAuthorized = (props) => {
             Session.setDefault('authorized', false);
             if (!Session.get('authorized'))
-                Session.set('authorized', !props.data[1][1].value
+                Session.set('authorized', !props.data[1][0].value
                     || (props.data[0] && props.data[0].profile.isAdmin));
         }
 

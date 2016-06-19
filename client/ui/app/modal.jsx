@@ -16,11 +16,10 @@ import {customStyles} from '/client/ui/app/app.jsx'
 export default class SettingModal extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props);
         this.state = {
             modalIsOpen: false,
-            toggleValue: this.props.settings[1].value,
-            password: CryptoJS.AES.decrypt(this.props.settings[2].value,this.props.settings[0].value).toString(CryptoJS.enc.Utf8)
+            toggleValue: this.props.settings[0].value,
+            password: CryptoJS.AES.decrypt(this.props.settings[2].value,this.props.settings[1].value).toString(CryptoJS.enc.Utf8)
         };
 
         this.openModal = ()=> {
@@ -28,7 +27,7 @@ export default class SettingModal extends React.Component {
         };
         this.closeModal = ()=> {
             this.setState({modalIsOpen: false});
-            const pass = CryptoJS.AES.encrypt(this.state.password, this.props.settings[0].value);
+            const pass = CryptoJS.AES.encrypt(this.state.password, this.props.settings[1].value);
             Settings.update({_id: 'password'}, {
                 $set: {
                     "value": pass.toString()
