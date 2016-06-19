@@ -63,46 +63,7 @@ nav {
     font-weight: 100;
 }
 
-/**
- * MODAL
- **/
-.ReactModal__Content {
-    text-align: left !important;
-}
 
-.modal-button {
-    border: none;
-    position: fixed;
-    right: 5%;
-    bottom: 2%;
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    padding: 0 !important;
-    background-color: rgb(202, 197, 120);
-    box-shadow: 0 3px 7px 0 rgba(202, 197, 120, 0.72);
-}
-
-.close {
-    position: fixed;
-    top: 0;
-    right: 2%;
-}
-
-.close button {
-    border: none;
-    background-color: transparent;
-    color: #aaa;
-    font-size: xx-large;
-    font-weight: bold;
-}
-
-.close button:hover,
-.close button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 /**
  * Notifications
@@ -322,24 +283,28 @@ nav {
     }
 }
 
+
 /**
- * SETTING MODAL
+ * MODAL
  **/
-.input-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 80%;
+.ReactModal__Content {
+    text-align: left !important;
 }
 
-.input-wrapper button {
-    display: inline-block;
-    position: absolute;
-    right: 1%;
-    padding-top: 8px;
+.modal-button {
     border: none;
-    background-color: transparent;
-
+    position: fixed;
+    right: 5%;
+    bottom: 2%;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    padding: 0 !important;
+    background-color: rgb(202, 197, 120);
+    box-shadow: 0 3px 7px 0 rgba(202, 197, 120, 0.72);
 }
+
+
 
 /**
  * TOGGLE
@@ -429,10 +394,6 @@ nav {
     outline-offset: -2px;
 }
 
-/**
- * TOGGLE
- **/
-
 .ReactModal__Content .cf-input {
     width: 100%;
     padding: 0.3em 0;
@@ -445,17 +406,62 @@ nav {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
+
 /**
- * PRIVACY MODEL
+ * SETTING MODAL
  **/
-.ReactModal__Content .cf-text--normal {
-    text-align: center;
-    margin-top: 2%;
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 80%;
 }
 
-.close button {
-    margin-top: 1%;
+.input-wrapper button {
+    display: inline-block;
+    position: absolute;
+    right: 1%;
+    padding-top: 8px;
+    border: none;
+    background-color: transparent;
+
+}
+/**
+ * PROFILE
+ **/
+.profile-wrapper h3{
+    text-align: center;
+}
+.profile-wrapper textarea{
+    width: 100%;
+}
+.profile-wrapper hr {
+    width: 99%;
+}
+.profile-wrapper .divider{
+    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.textAreas-wrapper{
+    float: left;
+    width: 50%;
+    padding-right: 10%;
+    border-right: 1px solid;
+    border-color: rgb(227, 227, 227);
+}
+.inputs-wrapper{
+    width: 40%;
     float: right;
+    margin-left: 5%;
+}
+.inputs-wrapper label{
+    margin-right: 10%;
+}
+.inputs-wrapper input{
+    width: 70%;
+}
+.facebook-input-wrapper{
+    margin-bottom: 11%;
 }
 /**
  * LOGIN FORM
@@ -502,40 +508,35 @@ nav {
     border: 1px solid rgb(227, 227, 227);
 }
 /**
- * PROFILE
+ * PRIVACY MODEL
  **/
-.profile-wrapper h3{
+.ReactModal__Content .cf-text--normal {
     text-align: center;
-}
-.profile-wrapper textarea{
-    width: 100%;
-}
-.profile-wrapper hr {
-    width: 99%;
-}
-.profile-wrapper .divider{
-    width: 50%;
     margin-top: 2%;
-    margin-bottom: 2%;
 }
-.textAreas-wrapper{
-    float: left;
-    width: 50%;
-    padding-right: 10%;
-    border-right: 1px solid;
-    border-color: rgb(227, 227, 227);
+.close {
+    position: fixed;
+    top: 0;
+    right: 2%;
 }
-.inputs-wrapper{
-    width: 40%;
+
+.close button {
+    border: none;
+    background-color: transparent;
+    color: #aaa;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.close button:hover,
+.close button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close button {
+    margin-top: 1%;
     float: right;
-    margin-left: 5%;
 }
-.inputs-wrapper label{
-    margin-right: 10%;
-}
-.inputs-wrapper input{
-    width: 70%;
-}
-.facebook-input-wrapper{
-    margin-bottom: 11%;
-}
+
