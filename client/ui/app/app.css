@@ -453,7 +453,7 @@ nav {
     margin-top: 2%;
 }
 
-.ReactModal__Content button {
+.close button {
     margin-top: 1%;
     float: right;
 }
