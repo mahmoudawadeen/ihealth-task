@@ -1,0 +1,541 @@
+* {
+    box-sizing: border-box;
+}
+
+/**
+ * Container
+ **/
+.container {
+    max-width: 1245px;
+    margin: 0 auto;
+
+}
+
+/**
+ * NAV
+ **/
+nav {
+    text-align: center;
+}
+
+.nav-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 115px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    display: table;
+    width: 100%;
+}
+
+.nav-wrapper li {
+    display: table-cell;
+}
+
+.nav-wrapper a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-wrapper hr {
+    width: 94%;
+    border: none;
+    height: 1px;
+    background-color: rgb(227, 227, 227);
+    margin: 0 auto;
+}
+
+/**
+ * LANDING
+ **/
+.header-wrapper {
+    text-align: center;
+}
+
+.header-wrapper h1 {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    color: rgb(48, 48, 48);
+    margin: 10% auto 2% auto;;
+    font-size: 72px;
+    font-weight: 100;
+}
+
+/**
+ * MODAL
+ **/
+.ReactModal__Content {
+    text-align: left !important;
+}
+
+.modal-button {
+    border: none;
+    position: fixed;
+    right: 5%;
+    bottom: 2%;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    padding: 0 !important;
+    background-color: rgb(202, 197, 120);
+    box-shadow: 0 3px 7px 0 rgba(202, 197, 120, 0.72);
+}
+
+.close {
+    position: fixed;
+    top: 0;
+    right: 2%;
+}
+
+.close button {
+    border: none;
+    background-color: transparent;
+    color: #aaa;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.close button:hover,
+.close button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/**
+ * Notifications
+ **/
+.cf-notifications {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.cf-notifications__item {
+    position: relative;
+    padding: 1em;
+    background: #eee;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font-size: larger;
+}
+
+.cf-notifications__item + .cf-notifications__item {
+    margin-top: 0.5em;
+}
+
+.cf-notifications__item--persist::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.cf-notifications__global_container {
+    margin: -8px -8px 8px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 25%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cf-notifications__global_container .cf-notifications {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cf-notifications__global_container .cf-notifications__item {
+    border-radius: 0;
+}
+
+.cf-notifications__global_container .cf-notifications__item + .cf-notifications__item {
+    margin-top: 0;
+}
+
+.cf-notifications__item--success {
+    background: #68970F;
+}
+
+.cf-notifications__item--error {
+    background: #FF3100;
+}
+
+.cf-notifications__item--info {
+    background: #00A9EB;
+}
+
+.cf-notifications__item--warning {
+    background: #FCA520;
+}
+
+.cf-notifications__item_progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.cf-notifications__item_progress--active {
+    width: 0;
+    transition: width 0ms linear;
+}
+
+.cf-notifications__item_message {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-weight: bold;
+}
+
+.cf-notifications__item_close {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    padding: 0.25em 1.2em;
+    cursor: pointer;
+}
+
+.cf-notifications__item_close:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.cf-notifications__item_close::before {
+    content: '\00D7';
+    font-size: 2em;
+}
+
+/**
+ * SPINNER
+ **/
+
+.sk-folding-cube {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: #fff;
+}
+
+.sk-folding-cube .sk-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+    animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+.sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg);
+}
+
+.sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    transform: scale(1.1) rotateZ(180deg);
+}
+
+.sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    transform: scale(1.1) rotateZ(270deg);
+}
+
+.sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+@-webkit-keyframes sk-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+@keyframes sk-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+/**
+ * SETTING MODAL
+ **/
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+}
+
+.input-wrapper button {
+    display: inline-block;
+    position: absolute;
+    right: 1%;
+    padding-top: 8px;
+    border: none;
+    background-color: transparent;
+
+}
+
+/**
+ * TOGGLE
+ **/
+
+.cf-toggle {
+    position: relative;
+    background: gray;
+    border-radius: 3px;
+    border: 1px solid gray;
+    cursor: pointer;
+    display: inline-block;
+    width: 20%;
+    float: right;
+    height: 30px;
+}
+
+.cf-toggle--active {
+    border-color: #00A9EB;
+}
+
+.cf-toggle::before,
+.cf-toggle::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    line-height: 2em;
+    text-align: center;
+    color: white;
+}
+
+.cf-toggle::before {
+    content: "On";
+    left: 0;
+    background: #00A9EB;
+}
+
+.cf-toggle::after {
+    content: "Off";
+    right: 0;
+}
+
+.cf-toggle__checkbox,
+.cf-toggle__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.cf-toggle__handle {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background: white;
+    border-radius: 2px;
+    transition: left 100ms ease;
+}
+
+.cf-toggle__handle::before {
+    content: "\e904  \e906";
+    font-family: "icons";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ccc;
+}
+
+.cf-toggle--active .cf-toggle__handle {
+    left: 50%;
+}
+
+.cf-toggle__checkbox:focus ~ .cf-toggle__handle {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+/**
+ * TOGGLE
+ **/
+
+.ReactModal__Content .cf-input {
+    width: 100%;
+    padding: 0.3em 0;
+    text-indent: 0.6em;
+    font: inherit;
+    -webkit-appearance: textfield;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/**
+ * PRIVACY MODEL
+ **/
+.ReactModal__Content .cf-text--normal {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.ReactModal__Content button {
+    margin-top: 1%;
+    float: right;
+}
+/**
+ * LOGIN FORM
+ **/
+.login-form-wrapper{
+    text-align: center;
+    width: 50%;
+    margin: 3% auto 0 auto;
+}
+.login-form-wrapper label{
+    width: 25%;
+    display: inline-block;
+    margin-right: 15%;
+    text-align: left;
+}
+.login-form-wrapper input{
+    width: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
+
+}
+.login-form-wrapper .cf-flex__item{
+    margin-top: 1%;
+}
+
+.login-form-wrapper legend{
+    position: relative;
+    width: 30%;
+}
+.toggle-legend label{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+}
+.login-form-wrapper .cf-toggle::after{
+    content: "Register";
+}
+.login-form-wrapper .cf-toggle::before{
+    content: "Login";
+}
+.login-form-wrapper fieldset{
+    border-radius: 10px;
+    border: 1px solid rgb(227, 227, 227);
+}
+/**
+ * PROFILE
+ **/
+.profile-wrapper h3{
+    text-align: center;
+}
+.profile-wrapper textarea{
+    width: 100%;
+}
+.profile-wrapper hr {
+    width: 99%;
+}
+.profile-wrapper .divider{
+    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.textAreas-wrapper{
+    float: left;
+    width: 50%;
+    padding-right: 10%;
+    border-right: 1px solid;
+    border-color: rgb(227, 227, 227);
+}
+.inputs-wrapper{
+    width: 40%;
+    float: right;
+    margin-left: 5%;
+}
+.inputs-wrapper label{
+    margin-right: 10%;
+}
+.inputs-wrapper input{
+    width: 70%;
+}
+.facebook-input-wrapper{
+    margin-bottom: 11%;
+}
